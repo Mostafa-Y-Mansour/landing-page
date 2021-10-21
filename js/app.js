@@ -22,7 +22,7 @@ const dataNav = document.querySelectorAll("[data-nav]");
 // Creat a Fragment //
 const fragment = document.createDocumentFragment();
 
-// A for loop to loop over every section //
+// A for loop to loop over and Create navlink for every section //
 for (let i = 0; i < dataNav.length; i++) {
   const navDataName = dataNav[i].getAttribute("data-nav");
 
@@ -48,6 +48,7 @@ for (let i = 0; i < dataNav.length; i++) {
   });
 }
 
+// add the "active" and "your-active-class" Class to the focused element //
 window.addEventListener("scroll", () => {
   for (let i = 0; i < dataNav.length; i++) {
     const rect = dataNav[i].getBoundingClientRect();
@@ -62,7 +63,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Scroll To The Top Button //
+// "Scroll To Top" Button //
 
 const topBtn = document.getElementById("top--btn");
 
@@ -73,7 +74,7 @@ topBtn.addEventListener("click", () =>
   })
 );
 
-// Make the to top button visable after Scrolling //
+// Make "Scroll To Top" button visable after Scrolling //
 
 let topBtnStyle = topBtn.style;
 
