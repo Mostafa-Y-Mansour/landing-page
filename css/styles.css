@@ -101,6 +101,8 @@ section {
     top: 0;
     width: 100%;
     z-index: 5;
+    transform: translateY(0);
+    transition: 0.3s 0.3s;
 }
 
 /* Footer Styles */
@@ -226,4 +228,37 @@ section.your-active-class .landing__container::after {
 		           translate(-1em) 
 		           rotate(-360deg);
 	}
+}
+
+
+/* Scroll To top Button */
+
+#top--btn {
+  position: fixed;
+  right: 10px;
+  bottom: 5px;
+  background-color: #e44c1c;
+  border: none;
+  outline: none;
+  padding: 30px;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px 0px #00000040;
+  transition: 0.3s;
+}
+
+#top--btn::before {
+  content: '';
+  border: 15px solid transparent;
+  border-bottom-color: #ffffffcc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+}
+
+#top--btn:hover {
+  background-color: #ff3d00;
+  border: 1px solid #e44c1c;
 }
