@@ -42,9 +42,10 @@ for (let i = 0; i < dataNav.length; i++) {
   list[i].addEventListener("click", function () {
     dataNav[i].scrollIntoView({
       behavior: "smooth",
-      block: "start",
+      block: "center",
       inline: "nearest",
     });
+    list[i].preventDefault();
   });
 }
 
@@ -100,7 +101,6 @@ document.addEventListener("scroll", () => {
     pageHeader.style.transform = "translateY(-100%)";
   } else {
     pageHeader.style.transform = "translateY(0%)";
-
   }
   lastScrollValue = scroll;
 });
